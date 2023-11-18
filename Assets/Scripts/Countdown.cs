@@ -44,7 +44,6 @@ public class Timer : MonoBehaviour
         
         currentWarmUpTime += Time.deltaTime;
         timerText.SetText((Mathf.Ceil(warmUpTime - currentWarmUpTime)).ToString());
-        Debug.Log("Warmup +");
     }
     private void IncrementMinigameTime()
     {
@@ -53,7 +52,6 @@ public class Timer : MonoBehaviour
         currentMinigameTime += Time.deltaTime;
         timerText.SetText((Mathf.Ceil(minigameTime - currentMinigameTime)).ToString());
         
-        Debug.Log("Minigame +");
     }
     
     private void IncrementPostTime()
@@ -63,7 +61,6 @@ public class Timer : MonoBehaviour
         currentPostTime += Time.deltaTime;
         timerText.SetText((Mathf.Ceil(postTime - currentPostTime)).ToString());
 
-        Debug.Log("Post +");
     }
     
 
@@ -87,7 +84,6 @@ public class Timer : MonoBehaviour
         if (currentPostTime < postTime) return;
 
         SceneManager.LoadScene("Scenes/Intermission");
-        Debug.Log("next scene");
         playerProgress.level += 1;
     }
 }

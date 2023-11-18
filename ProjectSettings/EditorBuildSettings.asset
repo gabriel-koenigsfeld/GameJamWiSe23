@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Minigame.unity
     guid: 31c486451c4e3904985cdfa55fd438b3
   - enabled: 1
-    path: Assets/Scenes/Minigame 1.unity
+    path: Assets/Scenes/Dodge Cars.unity
     guid: b8e252f394129b148b40441b639d1c28
   m_configObjects: {}
