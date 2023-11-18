@@ -183,8 +183,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press  A  and  D  to Avoid
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 911d8a4ddfe42274581ab9a26a7cebf1, type: 2}
-  m_sharedMaterial: {fileID: 467814954394702172, guid: 911d8a4ddfe42274581ab9a26a7cebf1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -568,6 +568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9568b4f136563c64cbdcb4868949fd2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerProgress: {fileID: 11400000, guid: 197171b1591d81f42ade3995a7a825c8, type: 2}
   points: {fileID: 4665581986740839476, guid: f3442a3473d34534697ba7cf822380d3, type: 3}
   currentTime: 0
   timeUntilNextSpawn: 0
@@ -898,6 +899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9568b4f136563c64cbdcb4868949fd2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerProgress: {fileID: 11400000, guid: 197171b1591d81f42ade3995a7a825c8, type: 2}
   points: {fileID: 4665581986740839476, guid: f3442a3473d34534697ba7cf822380d3, type: 3}
   currentTime: 0
   timeUntilNextSpawn: 0
@@ -1106,8 +1108,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 8
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 911d8a4ddfe42274581ab9a26a7cebf1, type: 2}
-  m_sharedMaterial: {fileID: 467814954394702172, guid: 911d8a4ddfe42274581ab9a26a7cebf1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1210,6 +1212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9568b4f136563c64cbdcb4868949fd2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerProgress: {fileID: 11400000, guid: 197171b1591d81f42ade3995a7a825c8, type: 2}
   points: {fileID: 4665581986740839476, guid: f3442a3473d34534697ba7cf822380d3, type: 3}
   currentTime: 0
   timeUntilNextSpawn: 0
