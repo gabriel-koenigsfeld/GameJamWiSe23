@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Intermission.unity
+    guid: ada5b9d259220f9499a018d230f78898
+  - enabled: 1
+    path: Assets/Scenes/Minigame.unity
+    guid: 31c486451c4e3904985cdfa55fd438b3
+  - enabled: 1
+    path: Assets/Scenes/Minigame 1.unity
+    guid: b8e252f394129b148b40441b639d1c28
   m_configObjects: {}
