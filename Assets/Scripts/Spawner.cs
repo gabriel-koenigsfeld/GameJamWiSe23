@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 public class Spawner : MonoBehaviour
 {
+    [SerializeField] private PlayerProgress _playerProgress;
     public GameObject points;
 
     public float currentTime;
@@ -22,6 +23,8 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
+        if (_playerProgress.timeState != TimeState.Minigame) return;
+        
         currentTime += Time.deltaTime;
         if (currentTime > timeUntilNextSpawn)
         {
