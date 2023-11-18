@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class InputManager : MonoBehaviour
 {
     [SerializeField] private KeyCode[] keys;
-    [SerializeField] private bool[] buttonsPressed;
+    public bool[] buttonsPressed;
     [SerializeField] private Image[] buttonImages;
     private void Update()
     {
