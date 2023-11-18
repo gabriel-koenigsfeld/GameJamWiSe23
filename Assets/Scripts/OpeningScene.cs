@@ -8,7 +8,7 @@ public class OpeningScene : MonoBehaviour
 {
     [SerializeField] private PlayerProgress _playerProgress;
 
-    private void Start()
+    private void Awake()
     {
         _playerProgress.level = 0;
         _playerProgress.rage = 150;

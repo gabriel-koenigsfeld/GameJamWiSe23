@@ -20,13 +20,19 @@ public class Timer : MonoBehaviour
     [SerializeField] private float postTime = 2f;
     private float currentPostTime;
 
+    [SerializeField] private TextMeshProUGUI warmUpText;
     [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private GameObject timerBG;
 
     public PlayerProgress playerProgress;
 
     private void Start()
     {
         playerProgress.timeState = TimeState.WarmUp;
+        
+        warmUpText.SetText((""));
+        timerText.SetText((""));
+        timerBG.SetActive(false);
     }
 
     void Update()
@@ -45,7 +51,7 @@ public class Timer : MonoBehaviour
         if (playerProgress.timeState != TimeState.WarmUp) return;
         
         currentWarmUpTime += Time.deltaTime;
-        timerText.SetText((Mathf.Ceil(warmUpTime - currentWarmUpTime)).ToString());
+        warmUpText.SetText((Mathf.Ceil(warmUpTime - currentWarmUpTime)).ToString());
     }
     private void IncrementMinigameTime()
     {
@@ -61,7 +67,8 @@ public class Timer : MonoBehaviour
         if (playerProgress.timeState != TimeState.Post) return;
 
         currentPostTime += Time.deltaTime;
-        timerText.SetText((Mathf.Ceil(postTime - currentPostTime)).ToString());
+        timerText.SetText("");
+        timerBG.SetActive(false);
 
     }
     
@@ -71,6 +78,8 @@ public class Timer : MonoBehaviour
         if (currentWarmUpTime < warmUpTime) return;
         
         playerProgress.timeState = TimeState.Minigame;
+        warmUpText.SetText("");
+        timerBG.SetActive(true);
     }
     
     private void CheckMinigameTimeOver()
@@ -78,6 +87,8 @@ public class Timer : MonoBehaviour
         if (currentMinigameTime < minigameTime) return;
         
         playerProgress.timeState = TimeState.Post;
+        timerText.SetText("");
+        timerBG.SetActive(false);
         
     }
     

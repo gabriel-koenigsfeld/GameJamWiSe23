@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: 888498784}
   - component: {fileID: 888498783}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Intermission Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -675,6 +675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerProgress: {fileID: 11400000, guid: 197171b1591d81f42ade3995a7a825c8, type: 2}
   intermissionTime: 3
+  intermissionText: {fileID: 888498784}
 --- !u!4 &1639163414
 Transform:
   m_ObjectHideFlags: 0

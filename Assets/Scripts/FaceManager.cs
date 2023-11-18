@@ -13,8 +13,6 @@ public class FaceManager : MonoBehaviour
     {
         if (_playerProgress.rage >= 150)
         {
-            Debug.Log("aaaa"+_playerProgress.rage);
-
             fumes.SetActive(true);
             faceAngerLevel4.SetActive(true);
             
