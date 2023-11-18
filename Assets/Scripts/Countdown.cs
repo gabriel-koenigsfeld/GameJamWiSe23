@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    public TimeState timeState = TimeState.WarmUp;
-
+    public UnityEvent eventOnSuccess;
+    public UnityEvent eventOnFail;
+    
     [SerializeField] private float warmUpTime = 3f;
     private float currentWarmUpTime;
     
@@ -85,6 +87,8 @@ public class Timer : MonoBehaviour
 
         SceneManager.LoadScene("Scenes/Intermission");
         playerProgress.level += 1;
+        //TODO: add condition if game failed or not
+        eventOnSuccess.Invoke();
     }
 }
 

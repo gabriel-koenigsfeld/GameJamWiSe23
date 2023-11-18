@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PlayerProgress
   m_EditorClassIdentifier: 
   level: 3
-  rage: 150
+  rage: 120
   timeState: 2
