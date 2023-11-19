@@ -1121,6 +1121,12 @@ MonoBehaviour:
   rotationPoint: {fileID: 924152327}
   _inputManager: {fileID: 4915533261366109118}
   standUpStatus: 0
+  deineSounds:
+  - {fileID: 8300000, guid: cc942f9a10cc6974dbf05bdc5ae68d4e, type: 3}
+  - {fileID: 8300000, guid: 5c7ce0af4a964574abe226e8db678d7a, type: 3}
+  - {fileID: 8300000, guid: 979622a28c7e4e84f8626a3bfe4f7a0f, type: 3}
+  - {fileID: 8300000, guid: a03ba94d927035c4e9578992360a7399, type: 3}
+  - {fileID: 8300000, guid: c66ba43bfcbed8647805058249502b65, type: 3}
 --- !u!224 &1583051293 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6577923777473985691, guid: f850361ca1d9270498143050edf46772, type: 3}

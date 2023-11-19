@@ -3702,6 +3702,12 @@ MonoBehaviour:
   _inputManager: {fileID: 1232713402}
   ToDos: {fileID: 1284451110}
   Done: {fileID: 1518437994}
+  deineSounds:
+  - {fileID: 8300000, guid: 65b9dde16686255449552fd7635c6ab5, type: 3}
+  - {fileID: 8300000, guid: 894c374245608cc4b95f8dd0407cf464, type: 3}
+  - {fileID: 8300000, guid: 6949b784cfdca8049a584fab9090964e, type: 3}
+  - {fileID: 8300000, guid: 4f0a9349b93b0e24d9648fc54e26781a, type: 3}
+  - {fileID: 8300000, guid: 2cd6ba63f207ebe46961e1c4169cff8b, type: 3}
 --- !u!4 &795200512
 Transform:
   m_ObjectHideFlags: 0
