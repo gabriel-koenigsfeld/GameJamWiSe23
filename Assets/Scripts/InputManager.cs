@@ -51,15 +51,22 @@ public class InputManager : MonoBehaviour
         Color currentColor = buttonImages[index].color;
         if (Input.GetKeyDown(key))
         {
+            buttonsPressed[index] = true;
+        }
+        else
+        {
+            buttonsPressed[index] = false;
+        }
+        
+        if (Input.GetKey(key))
+        {
             currentColor.a = 0.5f;
             buttonImages[index].color = currentColor;
-            buttonsPressed[index] = true;
         }
         else
         {
             currentColor.a = 1f;
             buttonImages[index].color = currentColor;
-            buttonsPressed[index] = false;
         }
     }
 }
