@@ -32,9 +32,9 @@ public class Game3 : MonoBehaviour
         {
             if( counter <= 50) 
             { 
-            ToDoList[ToDoList.Count - counter - 1].gameObject.SetActive(false);
-            DoneList[counter].gameObject.SetActive(true);
-            counter++;
+                ToDoList[ToDoList.Count - counter - 1].gameObject.SetActive(false);
+                DoneList[counter].gameObject.SetActive(true);
+                counter++;
             }
 
 
