@@ -14,5 +14,10 @@ public class RageManager : MonoBehaviour
     public void ModifyRage(int amount)
     {
         _playerProgress.rage += amount;
+        if (_playerProgress.rage > 180)
+        {
+            Debug.Log("too much rage");
+            _playerProgress.rage = 180;
+        }
     }
 }
