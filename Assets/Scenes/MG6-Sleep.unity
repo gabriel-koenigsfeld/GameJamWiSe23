@@ -1590,6 +1590,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1273501243}
     - target: {fileID: 3392506473872653795, guid: 10d69f535c2187e49a881237d16baf5b, type: 3}
+      propertyPath: actionText
+      value: 
+      objectReference: {fileID: 89665189}
+    - target: {fileID: 3392506473872653795, guid: 10d69f535c2187e49a881237d16baf5b, type: 3}
       propertyPath: warmUpText
       value: 
       objectReference: {fileID: 1853903282}

@@ -24,6 +24,7 @@ public class Timer : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI warmUpText;
     [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private TextMeshProUGUI actionText;
     [SerializeField] private GameObject timerBG;
 
     public PlayerProgress playerProgress;
@@ -84,6 +85,7 @@ public class Timer : MonoBehaviour
         
         playerProgress.timeState = TimeState.Minigame;
         warmUpText.SetText("");
+        actionText.SetText("");
         timerBG.SetActive(true);
     }
     
