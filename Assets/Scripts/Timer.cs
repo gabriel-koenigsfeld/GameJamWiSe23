@@ -8,8 +8,10 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
+    public bool successful;
     public UnityEvent eventOnSuccess;
     public UnityEvent eventOnFail;
+    public WinLoseIcons winLoseIcons;
     
     [SerializeField] private float warmUpTime = 3f;
     private float currentWarmUpTime;
@@ -37,13 +39,16 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        
         IncrementWarmUpTime();
         IncrementMinigameTime();
         IncrementPostTime();
         
-        CheckWarmUpTimeOver();
-        CheckMinigameTimeOver();
+        if(playerProgress.timeState != TimeState.Minigame && playerProgress.timeState != TimeState.Post) {
+            CheckWarmUpTimeOver();
+        }
+        if(playerProgress.timeState != TimeState.Post) {
+            CheckMinigameTimeOver();
+        }
         CheckPostTimeOver();
     }
     private void IncrementWarmUpTime()
@@ -90,6 +95,14 @@ public class Timer : MonoBehaviour
         timerText.SetText("");
         timerBG.SetActive(false);
         
+        if (successful)
+        {
+            eventOnSuccess.Invoke();
+        }
+        else
+        {
+            eventOnFail.Invoke();
+        }
     }
     
     private void CheckPostTimeOver()
@@ -98,8 +111,6 @@ public class Timer : MonoBehaviour
 
         SceneManager.LoadScene("Scenes/Intermission");
         playerProgress.level += 1;
-        //TODO: add condition if game failed or not
-        eventOnSuccess.Invoke();
     }
 }
 
