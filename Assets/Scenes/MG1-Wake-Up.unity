@@ -1120,6 +1120,7 @@ MonoBehaviour:
   rotationSpeed: -2
   rotationPoint: {fileID: 924152327}
   _inputManager: {fileID: 4915533261366109118}
+  standUpStatus: 1
 --- !u!224 &1583051293 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6577923777473985691, guid: f850361ca1d9270498143050edf46772, type: 3}

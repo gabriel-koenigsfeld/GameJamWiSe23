@@ -27,6 +27,10 @@ public class Game1 : MonoBehaviour
                     Debug.Log(transform.rotation.z);
                     transform.RotateAround(rotationPoint.transform.position, axis, rotationSpeed);
                 }
+                else
+                {
+                    _timer.successful = true;
+                }
             }
         }
         else
@@ -38,6 +42,10 @@ public class Game1 : MonoBehaviour
                 {
                    
                     transform.RotateAround(rotationPoint.transform.position, axis, rotationSpeed);
+                }
+                else
+                {
+                    _timer.successful = true;
                 }
             }
         }
