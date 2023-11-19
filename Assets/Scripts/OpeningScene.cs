@@ -11,7 +11,7 @@ public class OpeningScene : MonoBehaviour
     private void Awake()
     {
         _playerProgress.level = 0;
-        _playerProgress.rage = 150;
+        _playerProgress.rage = 50;
     }
 
     void Update()
