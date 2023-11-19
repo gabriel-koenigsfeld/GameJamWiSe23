@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Game1 : MonoBehaviour
 {
+    [SerializeField] private Timer _timer;
     [SerializeField] private PlayerProgress _playerProgress;
     public float rotationSpeed;
     public Transform rotationPoint;
