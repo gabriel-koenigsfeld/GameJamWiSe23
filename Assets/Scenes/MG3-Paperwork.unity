@@ -3349,9 +3349,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a09b6694a2bc5541a5da73e05314186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerProgress: {fileID: 11400000, guid: 197171b1591d81f42ade3995a7a825c8, type: 2}
   _inputManager: {fileID: 1232713402}
   ToDos: {fileID: 1284451110}
-  _playerProgress: {fileID: 11400000, guid: 197171b1591d81f42ade3995a7a825c8, type: 2}
+  Done: {fileID: 1518437994}
 --- !u!4 &795200512
 Transform:
   m_ObjectHideFlags: 0

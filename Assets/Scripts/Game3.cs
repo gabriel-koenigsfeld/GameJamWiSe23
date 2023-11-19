@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class Game3 : MonoBehaviour
 {
+    [SerializeField] private PlayerProgress _playerProgress;
     private int counter;
     public InputManager _inputManager;
     public GameObject ToDos;
+    public GameObject Done;
     private List<GameObject> ToDoList = new List<GameObject>();
-    [SerializeField] private PlayerProgress _playerProgress;
+    private List<GameObject> DoneList = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
         counter = 0;
         ToDoList = FülleListeMitChildObjekten(ToDos);
+        DoneList = FülleListeMitChildObjekten(Done);
     }
 
     // Update is called once per frame
@@ -24,13 +28,19 @@ public class Game3 : MonoBehaviour
     }
     void DoWork()
     {
-
         if (_inputManager.buttonsPressed[1])
         {
-            Debug.Log("pressed W");
-            ToDoList[counter].gameObject.SetActive(false);
+            if( counter <= 50) 
+            { 
+            ToDoList[ToDoList.Count - counter - 1].gameObject.SetActive(false);
+            DoneList[counter].gameObject.SetActive(true);
             counter++;
+            }
+
+
+
         }
+       
     }
 
 
