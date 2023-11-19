@@ -1342,7 +1342,7 @@ PrefabInstance:
       objectReference: {fileID: 1853903282}
     - target: {fileID: 3392506473872653795, guid: 10d69f535c2187e49a881237d16baf5b, type: 3}
       propertyPath: minigameTime
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3392506473872653795, guid: 10d69f535c2187e49a881237d16baf5b, type: 3}
       propertyPath: eventOnFail.m_PersistentCalls.m_Calls.Array.size

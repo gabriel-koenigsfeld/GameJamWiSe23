@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Game3 : MonoBehaviour
 {
+    [SerializeField] private Timer _timer;
     [SerializeField] private PlayerProgress _playerProgress;
     private int counter;
     public InputManager _inputManager;
@@ -16,8 +17,8 @@ public class Game3 : MonoBehaviour
     void Start()
     {
         counter = 0;
-        ToDoList = FülleListeMitChildObjekten(ToDos);
-        DoneList = FülleListeMitChildObjekten(Done);
+        ToDoList = FuelleListeMitChildObjekten(ToDos);
+        DoneList = FuelleListeMitChildObjekten(Done);
     }
 
     // Update is called once per frame
@@ -26,41 +27,36 @@ public class Game3 : MonoBehaviour
         if (_playerProgress.timeState != TimeState.Minigame) return;
         DoWork();
     }
+    
     void DoWork()
     {
         if (_inputManager.buttonsPressed[1])
         {
-            if( counter <= 50) 
+            if( counter <= ToDoList.Count-1) 
             { 
                 ToDoList[ToDoList.Count - counter - 1].gameObject.SetActive(false);
                 DoneList[counter].gameObject.SetActive(true);
                 counter++;
             }
-
-
-
+            else
+            {
+                _timer.successful = true;
+            }
         }
-       
     }
-
-
-
-
-
-    List<GameObject> FülleListeMitChildObjekten(GameObject Parent)
+    
+    List<GameObject> FuelleListeMitChildObjekten(GameObject Parent)
     {
         List<GameObject> ListObj = new List<GameObject>();
-        // Überprüfe, ob das Elternobjekt zugewiesen ist
+        // ï¿½berprï¿½fe, ob das Elternobjekt zugewiesen ist
         if (ListObj != null)
         {
             // Iteriere durch alle Child-Objekte des angegebenen Elternobjekts
             foreach (Transform child in Parent.transform)
             {
-                // Füge jedes Child-Objekt zur Liste hinzu
+                // Fï¿½ge jedes Child-Objekt zur Liste hinzu
                 ListObj.Add(child.gameObject);
             }
-
-            
         }
         else
         {
