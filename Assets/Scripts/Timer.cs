@@ -16,8 +16,8 @@ public class Timer : MonoBehaviour
     [SerializeField] private float warmUpTime = 3f;
     private float currentWarmUpTime;
     
-    [SerializeField] private float minigameTime = 8f;
-    private float currentMinigameTime;    
+    public float minigameTime = 8f;
+    public float currentMinigameTime;    
     
     [SerializeField] private float postTime = 2f;
     private float currentPostTime;
