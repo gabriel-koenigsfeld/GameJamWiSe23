@@ -3349,10 +3349,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a09b6694a2bc5541a5da73e05314186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timer: {fileID: 0}
   _playerProgress: {fileID: 11400000, guid: 197171b1591d81f42ade3995a7a825c8, type: 2}
   _inputManager: {fileID: 1232713402}
   ToDos: {fileID: 1284451110}
   Done: {fileID: 1518437994}
+  deineSounds:
+  - {fileID: 8300000, guid: f6822b43899f6e04bbedd632524c3e90, type: 3}
+  - {fileID: 8300000, guid: 3e108c1e09440c8418fd8fc9b7e49500, type: 3}
+  - {fileID: 8300000, guid: 74a38c5366116174ca944bd51988e480, type: 3}
+  - {fileID: 8300000, guid: df0066e0c8c375d4cb14605e01280880, type: 3}
+  - {fileID: 8300000, guid: 2bccf924e0abd9449a2293a9904258ba, type: 3}
 --- !u!4 &795200512
 Transform:
   m_ObjectHideFlags: 0
