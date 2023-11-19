@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ich bin so MAD!
+  m_text: Ein weiterer Morgen...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 911d8a4ddfe42274581ab9a26a7cebf1, type: 2}
   m_sharedMaterial: {fileID: 467814954394702172, guid: 911d8a4ddfe42274581ab9a26a7cebf1, type: 2}
