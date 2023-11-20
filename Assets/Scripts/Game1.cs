@@ -9,8 +9,18 @@ public class Game1 : MonoBehaviour
     public float rotationSpeed;
     public Transform rotationPoint;
     public InputManager _inputManager;
-    public bool standUpStatus; 
+    public bool standUpStatus;
+    public AudioClip[] deineSounds;
+    private AudioSource audioSource;
 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+    }
 
     void Update()
     {
@@ -26,6 +36,7 @@ public class Game1 : MonoBehaviour
                 {
                     Debug.Log(transform.rotation.z);
                     transform.RotateAround(rotationPoint.transform.position, axis, rotationSpeed);
+                    RandomSound();
                 }
                 else
                 {
@@ -42,6 +53,7 @@ public class Game1 : MonoBehaviour
                 {
                    
                     transform.RotateAround(rotationPoint.transform.position, axis, rotationSpeed);
+                    RandomSound();
                 }
                 else
                 {
@@ -51,5 +63,13 @@ public class Game1 : MonoBehaviour
         }
             
         
+    }
+    void RandomSound()
+    {
+        int randomIndex = Random.Range(0, deineSounds.Length);
+
+        // Den ausgewählten Sound abspielen
+        audioSource.PlayOneShot(deineSounds[randomIndex]);
+
     }
 }

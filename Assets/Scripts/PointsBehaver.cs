@@ -7,6 +7,7 @@ public class PointsBehaver : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
     private bool hit;
+    public bool driveDown;
     public float speed = 5f;
     private float startTime = 0f;
     private float liveTime = 0f;
@@ -26,7 +27,15 @@ public class PointsBehaver : MonoBehaviour
         DestroyObject();
 
         if (hit) return;
-        transform.Translate(Vector3.down * speed * Time.deltaTime);
+
+        if (driveDown)
+        {
+            transform.Translate(Vector3.down * speed * Time.deltaTime);
+        }
+        else
+        {
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
+        }
 
        
     }
@@ -39,7 +48,16 @@ public class PointsBehaver : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         hit = true;
-        _rigidbody2D.gravityScale = 4;
+        
+        if (driveDown)
+        {
+            _rigidbody2D.gravityScale = 4;
+        }
+        else
+        {
+            _rigidbody2D.gravityScale = -4;
+        }
+        
     }
 
     void DestroyObject()

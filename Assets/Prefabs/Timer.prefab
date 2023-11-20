@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 470d3980f608dce469eb8175a7693569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  successful: 0
   eventOnSuccess:
     m_PersistentCalls:
       m_Calls:
@@ -75,11 +76,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  winLoseIcons: {fileID: 0}
   warmUpTime: 3
   minigameTime: 8
+  currentMinigameTime: 0
   postTime: 2
+  warmUpText: {fileID: 0}
   timerText: {fileID: 0}
+  timerBG: {fileID: 0}
   playerProgress: {fileID: 11400000, guid: 197171b1591d81f42ade3995a7a825c8, type: 2}
+  soundCounter: 0
+  deineSounds:
+  - {fileID: 8300000, guid: eac9da9cf131f5047908406a574aab7e, type: 3}
+  - {fileID: 8300000, guid: b6a5beafb7c527b419362665b36150ff, type: 3}
+  - {fileID: 8300000, guid: 31d7daef6fb688c4fa1af1ef046b1e5b, type: 3}
 --- !u!114 &3341415901432785797
 MonoBehaviour:
   m_ObjectHideFlags: 0

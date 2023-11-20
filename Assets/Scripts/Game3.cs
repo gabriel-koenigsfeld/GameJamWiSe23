@@ -12,6 +12,10 @@ public class Game3 : MonoBehaviour
     public GameObject Done;
     private List<GameObject> ToDoList = new List<GameObject>();
     private List<GameObject> DoneList = new List<GameObject>();
+    public AudioClip[] deineSounds;
+    private AudioSource audioSource;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +23,12 @@ public class Game3 : MonoBehaviour
         counter = 0;
         ToDoList = FuelleListeMitChildObjekten(ToDos);
         DoneList = FuelleListeMitChildObjekten(Done);
+        audioSource = GetComponent<AudioSource>();
+
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     // Update is called once per frame
@@ -36,6 +46,7 @@ public class Game3 : MonoBehaviour
             { 
                 ToDoList[ToDoList.Count - counter - 1].gameObject.SetActive(false);
                 DoneList[counter].gameObject.SetActive(true);
+                RandomSound();
                 counter++;
             }
             else
@@ -63,5 +74,13 @@ public class Game3 : MonoBehaviour
             Debug.LogError("Elternobjekt nicht zugewiesen! Bitte weise das Elternobjekt in der Inspector-Ansicht zu.");
         }
         return ListObj;
+    }
+    void RandomSound()
+    {
+        int randomIndex = Random.Range(0, deineSounds.Length);
+
+        // Den ausgewählten Sound abspielen
+        audioSource.PlayOneShot(deineSounds[randomIndex]);
+
     }
 }
