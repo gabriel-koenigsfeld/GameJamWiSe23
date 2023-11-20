@@ -18,7 +18,7 @@ public class RagemeterUI : MonoBehaviour
             sliderValue = 0.05f;
         }
         slider.value = sliderValue;
-        Debug.Log(sliderValue);
+
         rageText.text = _playerProgress.rage.ToString();
     }
 

@@ -31,7 +31,7 @@ public class SceneIntermission : MonoBehaviour
 
         if (_playerProgress.rage < 150 && _playerProgress.rage >= 120)
         {
-            intermissionText.text = "Sauer bin ich ja";
+            intermissionText.text = "Langsam reichts!";
         }
         
         if (_playerProgress.rage < 120 && _playerProgress.rage >= 80)
@@ -41,6 +41,6 @@ public class SceneIntermission : MonoBehaviour
 
         if (_playerProgress.rage >= 80) return;
 
-        intermissionText.text = "Endlich... Frieden.";
+        intermissionText.text = "So friedlich...";
     }
 }

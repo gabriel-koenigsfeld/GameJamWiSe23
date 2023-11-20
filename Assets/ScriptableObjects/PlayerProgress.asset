@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 744d0bc29d7300c4dacf91d307122624, type: 3}
   m_Name: PlayerProgress
   m_EditorClassIdentifier: 
-  level: 12
-  rage: 110
-  timeState: 2
+  level: 0
+  rage: 50
+  timeState: 1
+  day: 0

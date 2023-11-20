@@ -8,4 +8,5 @@ public class PlayerProgress : ScriptableObject
     public int level;
     public int rage = 150;
     public TimeState timeState;
+    public int day;
 }

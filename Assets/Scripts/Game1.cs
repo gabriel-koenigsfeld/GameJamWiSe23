@@ -34,7 +34,6 @@ public class Game1 : MonoBehaviour
                 // Rotiere das GameObject um den angegebenen Punkt und Achse basierend auf der Zeit und der Rotationssgeschwindigkeit
                 if (Mathf.Abs(transform.rotation.z) < 0.7)
                 {
-                    Debug.Log(transform.rotation.z);
                     transform.RotateAround(rotationPoint.transform.position, axis, rotationSpeed);
                     RandomSound();
                 }
@@ -68,7 +67,7 @@ public class Game1 : MonoBehaviour
     {
         int randomIndex = Random.Range(0, deineSounds.Length);
 
-        // Den ausgewählten Sound abspielen
+        // Den ausgewÃ¤hlten Sound abspielen
         audioSource.PlayOneShot(deineSounds[randomIndex]);
 
     }
