@@ -6,6 +6,30 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/StartScreen.unity
+    guid: effe69367e3470d458677dffde45344b
+  - enabled: 1
+    path: Assets/Scenes/Intermission.unity
+    guid: ada5b9d259220f9499a018d230f78898
+  - enabled: 1
+    path: Assets/Scenes/MG1-Wake-Up.unity
+    guid: 5b25720073ae87e4c8f7e5018f0760eb
+  - enabled: 1
+    path: Assets/Scenes/MG2-Dodge-Cars.unity
+    guid: b8e252f394129b148b40441b639d1c28
+  - enabled: 1
+    path: Assets/Scenes/MG3-Paperwork.unity
+    guid: 37486f63492df7d47835094c25545693
+  - enabled: 1
+    path: Assets/Scenes/MG4-Dodge-Cars-2.unity
+    guid: f13f2de1e1875b0419b53b8252c392c5
+  - enabled: 1
+    path: Assets/Scenes/MG5-Wash.unity
+    guid: c5b287e4c20ddb04c93056ff58c66e65
+  - enabled: 1
+    path: Assets/Scenes/MG6-Sleep.unity
+    guid: da12659bd555db743a60bcb2774f9dd3
+  - enabled: 1
+    path: Assets/Scenes/EndingScreen.unity
+    guid: 36607f7dd0a5942478cc16ef9dbb5fd3
   m_configObjects: {}

@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7343269934154233084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1610640241215240739}
+  - component: {fileID: 3392506473872653795}
+  - component: {fileID: 3341415901432785797}
+  m_Layer: 0
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1610640241215240739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343269934154233084}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3392506473872653795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343269934154233084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 470d3980f608dce469eb8175a7693569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successful: 0
+  eventOnSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3341415901432785797}
+        m_TargetAssemblyTypeName: RageManager, Assembly-CSharp
+        m_MethodName: ModifyRage
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -30
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  eventOnFail:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3341415901432785797}
+        m_TargetAssemblyTypeName: RageManager, Assembly-CSharp
+        m_MethodName: ModifyRage
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  winLoseIcons: {fileID: 0}
+  warmUpTime: 3
+  minigameTime: 8
+  currentMinigameTime: 0
+  postTime: 2
+  warmUpText: {fileID: 0}
+  timerText: {fileID: 0}
+  timerBG: {fileID: 0}
+  playerProgress: {fileID: 11400000, guid: 197171b1591d81f42ade3995a7a825c8, type: 2}
+  soundCounter: 0
+  deineSounds:
+  - {fileID: 8300000, guid: eac9da9cf131f5047908406a574aab7e, type: 3}
+  - {fileID: 8300000, guid: b6a5beafb7c527b419362665b36150ff, type: 3}
+  - {fileID: 8300000, guid: 31d7daef6fb688c4fa1af1ef046b1e5b, type: 3}
+--- !u!114 &3341415901432785797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343269934154233084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e62393d766abbe45a76f573b8c646a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerProgress: {fileID: 11400000, guid: 197171b1591d81f42ade3995a7a825c8, type: 2}

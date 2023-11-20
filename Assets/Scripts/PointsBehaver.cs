@@ -1,9 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PointsBehaver : MonoBehaviour
 {
+    private Rigidbody2D _rigidbody2D;
+    private bool hit;
+    public bool driveDown;
     public float speed = 5f;
     private float startTime = 0f;
     private float liveTime = 0f;
@@ -19,11 +23,42 @@ public class PointsBehaver : MonoBehaviour
     {
         liveTime += Time.deltaTime;
         // Bewege das Objekt nach unten basierend auf der Geschwindigkeit und der Zeit zwischen den Frames
-        transform.Translate(Vector3.down * speed * Time.deltaTime);
+        
         DestroyObject();
+
+        if (hit) return;
+
+        if (driveDown)
+        {
+            transform.Translate(Vector3.down * speed * Time.deltaTime);
+        }
+        else
+        {
+            transform.Translate(Vector3.up * speed * Time.deltaTime);
+        }
+
        
     }
 
+    private void Awake()
+    {
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        hit = true;
+        
+        if (driveDown)
+        {
+            _rigidbody2D.gravityScale = 4;
+        }
+        else
+        {
+            _rigidbody2D.gravityScale = -4;
+        }
+        
+    }
 
     void DestroyObject()
     {
